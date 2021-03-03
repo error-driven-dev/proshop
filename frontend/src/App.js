@@ -15,7 +15,7 @@ function App() {
           {" "}
           <Router>
             <Route path='/' exact component={HomePage}></Route>
-            <Route path='/product/:id' component={ProductPage}></Route>
+            <Route path='/products/:id' component={ProductPage}></Route>
           </Router>
         </Container>
       </main>

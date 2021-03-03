@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import {
   Card,
@@ -9,11 +9,21 @@ import {
   ListGroupItem,
   Button,
 } from "react-bootstrap"
-import products from "../products"
+import axios from "axios"
 import { Rating } from "../components/Rating"
 
 export const ProductPage = ({ match }) => {
-  const product = products.find((product) => product._id === match.params.id)
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`)
+      setProduct(data)
+      console.log(product)
+    }
+    fetchProduct()
+  }, [match])
+
   return (
     <>
       <Link className='btn btn-dark my-3' to='/' exact>

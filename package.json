@@ -1,0 +1,32 @@
+{
+  "name": "proshop",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ecomm platform",
+  "main": "server.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fontawesome": "^5.6.3",
+    "mongoose": "^5.11.18",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/error-driven-dev/proshop.git"
+  },
+  "author": "Beth Hart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/error-driven-dev/proshop/issues"
+  },
+  "homepage": "https://github.com/error-driven-dev/proshop#readme"
+}
